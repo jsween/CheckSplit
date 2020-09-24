@@ -45,6 +45,7 @@ struct ContentView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     Text("New Total: $\(totalWithTip, specifier: "%.2f")")
+                        .foregroundColor(tipPercentage == tipPercentages.count - 1 ? .red : .primary)
                 }
                 Section(header: Text("Amount per Person")) {
                     Text("$\(totalPerPerson, specifier: "%.2f")")
